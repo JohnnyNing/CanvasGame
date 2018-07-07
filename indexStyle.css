@@ -1,0 +1,51 @@
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+		'header header header header header header'
+		'menu main main main main main'
+		'menu main main	main main main'
+		'menu main main main main main'
+		'menu main main main main main'
+		'footer footer footer footer footer footer';
+		grid-gap: 5px;
+		background-color: gray;
+		padding: 10px;
+}
+
+.grid-container > div {
+	background-color : rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding : 20px 0;
+	font-size: 30px;
+}
+
+.item1{
+	grid-area: header;
+	height: 20px;
+}
+.item2{
+	grid-area: menu;
+	height: 680px;
+}
+.item3{
+	grid-area: main;
+	height: 680px;
+}
+.item4{
+	grid-area: footer;
+	height: 10px;
+}
+
+.board-grid-container{
+	padding-left: 300px;
+	padding-bottom: 10px;
+	padding-top: 50px;
+	margin: 0px;
+}
+
+#board-grid{
+	
+	border-collapse: collapse;
+}
+
+
