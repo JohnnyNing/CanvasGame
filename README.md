@@ -1,1 +1,1 @@
-# Gomoko
+# Canvas Game
