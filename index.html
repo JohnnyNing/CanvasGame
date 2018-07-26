@@ -1,52 +1,42 @@
-<!Doctype html>
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Gomoko
-	</title>
+	<title>Showcase2</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="indexStyle.css">
-	
-	<script src="main.js"></script>
-	<script src="cell.js"></script>
+	<link rel="stylesheet" type="text/css" href="showcase2.css">
+
 
 </head>
-	<body onload="setUp();">
-		<div class="grid-container">
-			<div class="item1"> Header </div>
-			<div class="item2"> Menu</div>
-			<div class="item3">
-				<div class="board-grid-container"> 
-					<table id="board-grid" border="1px" ></table>
-						
+<body>
+<div class="grid-container">
+			<div class="item1"> How Long Can You Stay Alive? </div>
+			<div class="item2" > 
+				<h1>Rules</h1>
+				<h4 style="text-align: left">1.<br> Every 3 seconds, a new enemy will be created</h4>
+				<h4 style="text-align: left">2.<br> The enemy will make it easier to catch you by making you bigger and they will bite you, you will lose your HP</h4>
+				<h4 style="text-align: left">3.When you lose all your HP, you die<br> </h4>
 
-				</div>
+
+
 			</div>
 
 
 
-			<div class="item4">Footer</div>
+			<div id="mainFrame" class="item3">
+				 
+					<canvas id="canvas1"; class ="canvas";> your browser does not support canvas</canvas>		
+						<script src="main.js" ></script>
+						
+
+						<button id="play_pause_btn"; class = "relative"; onclick="play_pause_btn_clicked();">Play</button>
+						
+			</div>
+
+
+
+
+			<div class="item4">Contact: nzhang1@bruinmail.slcc.edu</div>
 		</div>
 
-		
-
-
-	</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
 </html>
