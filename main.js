@@ -4,7 +4,10 @@ canvas.margin = 100;
 canvas.width = 800;
 canvas.height = 600;
 
+// play button trigger 
 var isPlaying = false;
+
+// reference for the layout to help locate mouse position
 var item3 = document.getElementById('mainFrame');
 var GAMEOVERMSG = "Hhahaha...  You are dead!!" + '\n' + "Your living time is: ";
 
@@ -19,6 +22,8 @@ var c = canvas.getContext('2d');
 // 			        time_sec=pad(++time_sec%60);
 // 			        time_min=pad(parseInt(time_sec/60,10));
 // 			    }, 1000);
+
+// setting timer 
 function timmer(){
 	time_sec++;
 	if(time_sec % 3 ==0){
@@ -46,6 +51,7 @@ var player_Score = 0;
 	
 
 // creating player object 
+
 function Player(x,y,radius){
 	this.x = x;
 	this.y = y;
@@ -82,7 +88,7 @@ function Player(x,y,radius){
 var player= new Player(canvas.width/2,canvas.height/2,20);
 
 //tracking the mouse movement 
-addEventListener('mousemove', function(event){
+window.addEventListener('mousemove', function(event){
 	Mouse.x = event.x;
 	Mouse.y = event.y;
 
@@ -138,6 +144,7 @@ for(var i = 0; i<1; i++){
 }
 
 
+// this is the calculation of the distance of the player and the circles 
 function getDistance(x1, y1, x2, y2){
 	let xDistance = x2 - x1;
 	let yDistance = y2 - y1;
@@ -146,6 +153,7 @@ function getDistance(x1, y1, x2, y2){
 }
 
 
+// the most important part
 function animate(){
 	//creating a loop, call cycling through the argument in the parenthsis
 	
@@ -181,7 +189,7 @@ function animate(){
 			--player_HP;
 			if(player_HP<0 ){
 				player_HP = 0;
-				
+				player.radius = 5;
 
 					if (confirm(GAMEOVERMSG+time_sec+" seconds" + "\n"+"Press OK to play again, Press cancel to quit")) {
 				       location.reload();
@@ -200,7 +208,7 @@ function animate(){
 	 c.font = "18px arial";
 	 c.fillStyle = '#fff';
 	 c.fillText('Your HP: ' + player_HP, 15, 35);
-	 c.fillText('Your Score: ' + player_Score, 350, 35);
+	 //c.fillText('Your Score: ' + player_Score, 350, 35);
 	 c.fillText('Time:   '+ time_sec+ " seconds", 600, 35);
 }
 
